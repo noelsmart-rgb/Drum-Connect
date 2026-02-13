@@ -569,28 +569,91 @@ body {
   transform: scale(1.02);
 }
 
-.equipment-card h6 {
+/* Compact image area so all 6 Kit Overview cards fit on one line */
+.equipment-img-wrap {
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 400 / 280;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--bg-alt);
+}
+
+.equipment-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  vertical-align: top;
+}
+
+.equipment-card-body {
+  background: var(--bg-card);
+  padding: 0.5rem 0.35rem;
+}
+
+.equipment-card-body h6 {
   color: var(--text);
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.15rem;
+  font-size: 0.9rem;
 }
 
-.equipment-card small {
+.equipment-card-body small {
   color: var(--text-muted);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
-.equipment-icon {
-  font-size: 2rem;
+/* Full 5-piece drum kit image at bottom of Kit Overview */
+.drum-kit-full {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drum-kit-full-wrap {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+}
+
+.drum-kit-full-img {
+  width: 100%;
+  height: auto;
   display: block;
+  object-fit: cover;
+  max-height: 400px;
+  vertical-align: top;
 }
 
-.equipment-icon.kick { color: #8b4513; }
-.equipment-icon.snare { color: #c0c0c0; }
-.equipment-icon.hihat { color: #4a4a4a; }
-.equipment-icon.tom { color: #cd853f; }
-.equipment-icon.crash { color: #b8860b; }
-.equipment-icon.ride { color: #808080; }
+/* Overlay labels on kit image – 5 drums + all cymbals, typical 5-piece layout */
+.kit-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* 5 drum parts */
+.kit-label-kick      { left: 47%;  top: 70%; }
+.kit-label-snare     { left: 32%;  top: 72%; }
+.kit-label-high-tom  { left: 40%;  top: 26%; }
+.kit-label-mid-tom   { left: 54%;  top: 28%; }
+.kit-label-floor-tom { left: 65%;  top: 70%; }
+
+/* Cymbals */
+.kit-label-hihat  { left: 16%;  top: 52%; }
+.kit-label-ride   { left: 84%;  top: 52%; }
+.kit-label-crash1 { left: 75%;  top: 12%; }
+.kit-label-crash2 { left: 25%;  top: 14%; }
 
 /* Metronome */
 .metronome-box {
