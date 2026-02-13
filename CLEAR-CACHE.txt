@@ -1,0 +1,31 @@
+Clear cache so the site loads the latest script (real drum sounds in Techniques)
+
+Option A — Hard refresh (try first)
+  • With the Drum Connect page open: press Ctrl + Shift + R
+  • Or Ctrl + F5
+
+Option B — Clear cache for this site (Chrome / Edge)
+  1. Open the Drum Connect page (index.html in browser).
+  2. Press F12 to open DevTools.
+  3. Right‑click the browser’s Refresh button (next to the address bar).
+  4. Click “Empty Cache and Hard Reload”.
+  (If you don’t see it: DevTools → Application → Storage → “Clear site data”.)
+
+Option C — Clear all browsing data (Chrome)
+  1. Ctrl + Shift + Delete.
+  2. Choose “Cached images and files”.
+  3. Time range: “Last hour” or “All time”.
+  4. Click “Clear data”.
+
+Option D — Open in private/incognito
+  • Ctrl + Shift + N (Chrome) or Ctrl + Shift + P (Edge).
+  • In that window, open index.html (File → Open file, or drag index.html into the window).
+  • Private windows use no cache, so you’ll get the latest script.
+
+Check that new script loaded
+  • F12 → Sources (or Debugger) → open script.js.
+  • At the top you should see: “Script version: 4 — technique Listen uses same real snare”.
+
+If you open the site via file:// and sounds still don’t load, run a local server:
+  In this folder in a terminal:  npx serve .
+  Then open the URL it shows (e.g. http://localhost:3000).
