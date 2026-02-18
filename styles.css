@@ -606,24 +606,27 @@ body {
   font-size: 0.7rem;
 }
 
-/* Full 5-piece drum kit image at bottom of Kit Overview */
+/* Full 5-piece drum kit image at bottom of Kit Overview – zoomed out so full kit visible (cymbals, pedals), labels stay aligned */
 .drum-kit-full {
-  max-width: 900px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -0.5rem;
 }
 
 .drum-kit-full-wrap {
   background: var(--bg-alt);
   border: 1px solid var(--border);
+  aspect-ratio: 1280 / 825;
+  position: relative;
 }
 
 .drum-kit-full-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: cover;
-  max-height: 400px;
+  object-fit: contain;
+  object-position: center center;
   vertical-align: top;
 }
 
@@ -643,9 +646,9 @@ body {
 }
 
 /* 5 drum parts */
-.kit-label-kick      { left: 47%;  top: 70%; }
+.kit-label-kick      { left: 47%;  top: 65%; }
 .kit-label-snare     { left: 32%;  top: 72%; }
-.kit-label-high-tom  { left: 40%;  top: 26%; }
+.kit-label-high-tom  { left: 40%;  top: 30%; }
 .kit-label-mid-tom   { left: 54%;  top: 28%; }
 .kit-label-floor-tom { left: 65%;  top: 70%; }
 
@@ -654,6 +657,7 @@ body {
 .kit-label-ride   { left: 84%;  top: 52%; }
 .kit-label-crash1 { left: 75%;  top: 12%; }
 .kit-label-crash2 { left: 25%;  top: 14%; }
+.kit-label-pedals { left: 48%;  top: 88%; }
 
 /* Metronome */
 .metronome-box {
