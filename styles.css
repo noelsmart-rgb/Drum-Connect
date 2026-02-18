@@ -606,6 +606,46 @@ body {
   font-size: 0.7rem;
 }
 
+/* Drumming Styles section */
+.style-card {
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  height: 100%;
+  transition: border-color 0.2s;
+}
+
+.style-card:hover {
+  border-color: var(--accent);
+}
+
+.style-card h6 {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.style-card p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.style-link {
+  display: inline-flex;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.style-link:hover {
+  color: var(--accent-hover);
+}
+
 /* Full 5-piece drum kit image at bottom of Kit Overview – zoomed out so full kit visible (cymbals, pedals), labels stay aligned */
 .drum-kit-full {
   max-width: 960px;
