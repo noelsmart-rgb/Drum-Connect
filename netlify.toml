@@ -1,0 +1,3 @@
+# Netlify config for Drum Connect (static site)
+[build]
+  publish = "."
