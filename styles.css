@@ -226,15 +226,24 @@ body {
 
 .grip-card-image-wrap {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 2 / 3;
   overflow: hidden;
   background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Traditional grip: same as default (full image, no crop) */
+.grip-card-image-wrap--traditional {
+  aspect-ratio: 2 / 3;
 }
 
 .grip-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   display: block;
 }
 
